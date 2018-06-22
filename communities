@@ -1,0 +1,3176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>x32.io</title>
+
+        <meta charset="UTF-8">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="author" content="J. Albert Sanchez">
+        <!-- <meta http-equiv="refresh" content="30"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+        <!-- From the W3Schools -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Fonts -->
+
+        <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+
+
+        <style>
+            header {
+                width: 100%;
+                height: 106px;
+                margin-bottom: 10px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid rgba(206, 206, 206, 0.63);
+
+            }
+
+            header h1 {
+                position: relative;
+                left: 8%;
+                padding: 13px 0;
+                font-family: 'Anton', sans-serif;
+                font-size: 46px;
+            }
+
+
+            .sb {
+			border: 1px solid #e6e6e6 !important;
+
+		}
+
+            .sb li {
+                list-style: none;
+                font-size: 22px;
+            }
+
+
+
+            * {
+              box-sizing: border-box;
+            }
+
+
+            #myInput {
+              background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+              background-position: 10px 12px; /* Position the search icon */
+              background-repeat: no-repeat; /* Do not repeat the icon image */
+              width: 100%; /* Full-width */
+              font-size: 16px; /* Increase font-size */
+              padding: 12px 20px 12px 40px; /* Add some padding */
+              border: 1px solid #ddd; /* Add a grey border */
+              margin-bottom: 12px; /* Add some space below the input */
+            }
+
+            #myTable {
+              border-collapse: collapse; /* Collapse borders */
+              width: 100%; /* Full-width */
+              border: 1px solid #ddd; /* Add a grey border */
+              font-size: 18px; /* Increase font-size */
+            }
+
+            #myTable th, #myTable td {
+              text-align: left; /* Left-align text */
+              padding: 12px; /* Add padding */
+            }
+
+            #myTable tr {
+              /* Add a bottom border to all table rows */
+              border-bottom: 1px solid #ddd;
+            }
+
+            #myTable tr.header, #myTable tr:hover {
+              /* Add a grey background color to the table header and on hover */
+              background-color: #f1f1f1;
+            }
+
+
+
+
+            .search {
+              margin: 20px 0px;
+
+            }
+
+
+
+
+
+
+
+        .nav-container {
+  				width: 100%;
+  				height: 50px;
+  				padding: 2px 80px;
+  				clear: both;
+  				position: relative;
+  				top: 20px;
+  				font-family: Helvetica, sans-serif;
+  				text-align: center;
+
+  			}
+
+
+  			ul {
+  				margin: 0px;
+  				padding: 0px;
+  				list-style: none;
+
+  			}
+
+  			ul li {
+  				float: left;
+  				width: 200px;
+  				height: 40px;
+  				background-color: #333333;
+  				opacity: 1.;
+  				line-height: 40px;
+  				text-align: center;
+  				font-size: 20px;
+  				margin-right: 2px;
+  			}
+
+  			ul li a {
+  				text-decoration: none;
+  				color: white;
+  				display: block;
+  			}
+
+  			ul li a:hover {
+  				background-color: #ff5100;
+  				text-decoration: none;
+  			}
+
+  			ul li ul li {
+  				display: none;
+  			}
+
+  			ul li:hover ul li {
+  				display: block;
+  			}
+
+        footer {
+          height: 250px;
+          background-color: #111111;
+          padding: 5% 40%;
+        }
+
+
+        footer a {
+          color: #fff;
+        }
+
+
+      </style>
+
+
+
+      <script>
+    function myFunction() {
+    // Declare variables 
+    var input, filter, table, tr, td, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+      } 
+    }
+    }
+  </script>
+
+
+
+      </head>
+      <body>
+
+        <header class="container-fluid">
+            <h1>x32.io</h1>
+        </header>
+
+        <nav class="nav-container">
+          <ul>
+            <li><a href="../blank.html">blank</a></li>
+            <li><a href="../blank/blank.html">blank</a></li>
+            <li><a href="../blank/blank.html">blank</a></li>
+            <li><a href="../blank/blank.html">blank</a></li>
+            <li><a href="blank.html">blank</a></li>
+            <li><a href="../blank/blank.html">blank</a></li>
+          </ul>
+        </nav>
+
+        <br><br><br><br><br><br><br><br>
+
+        <div class="astl-container">
+
+        <div style="height: 100px;"></div>
+
+
+        <div class="container">
+        <div class="row">
+            <div class="col-sm-8"  style="padding-right: 2em;">
+                <h2>Communities</h2>
+
+
+
+
+                <!-- START OF "COMMUNITIES CONTENT LINKS" -->
+
+
+
+                <!--  Online Groups, Communities, & Associations  -->
+                <div class="container">
+                  <h3 class="text-center">Online Groups, Communities, & Associations</h3>
+                </div>
+                <div class="container" style="margin: 0 18%;">
+
+
+                  <div class="row">
+
+                  <!--  FACEBOOK GROUPS  -->
+                  <div class="col-sm-3">
+                  <iframe src="facebook.html" style="width:100%;height:260px;float:left;margin-right:15px;">
+
+                  </iframe>
+                  <caption><i>Facebook/Linkedin</i></caption>
+                  </div>
+
+
+
+                <!--  Reddit GROUPS  -->
+
+                  <div class="col-sm-3">
+                  <iframe src="reddit.html" style="width:100%;height:260px;float:left;margin-right:15px;">
+
+                  </iframe>
+                  <caption><i>Reddit/Slack</i></caption>
+                  </div>
+
+
+                  <!--  ASSOCIATIONS GROUPS  -->
+                    <div class="col-sm-3">
+                    <iframe src="associations.html" style="width:100%;height:260px;float:left;">
+
+                    </iframe>
+                    <caption><i>Associations</i></caption>
+                    </div>
+
+                    </div>
+                  </div>
+
+                  <br>
+                  <br>
+
+                  <div class="container">
+                    <hr>
+                  </div>
+
+
+
+            <br>
+            </div>
+
+
+        <!--  Here's the cut and paste ROW CODE  -->
+
+        <div class="container">
+        <div class="row">
+            <div class="col-sm-8 a"  style="padding-right: 2em;">
+
+                <br>
+
+
+
+                <!--  MEETUP/SEARCH  -->
+
+
+                <div class="container">
+
+                  <h2 class="text-left">Meetups</h2>
+
+                  <div class="search">
+
+
+                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for groups by name or city..." title="Type in a name">
+
+                    <table id="myTable">
+                    <tr class="header">
+                      <th style="width:50%;">Name</th>
+                      <th style="width:30%;">State/Province</th>
+                      <th style="width:20%;">Country</th>
+                    </tr>
+
+                    <!-- CANADA -->
+
+                    <tr>
+                      <td><a href="http://www.meetup.com/TorontoVR/" target="_blank" rel="noopener">TorontoVR</a></td>
+                      <td>Ontario</td>
+                      <td>Canada</td>
+                    </tr>
+                    <tr>
+                      <td><a href="http://www.meetup.com/vartoronto/" target="_blank" rel="noopener">Virtual and Augmented Realities Toronto</a></td>
+                      <td>Ontario</td>
+                      <td>Canada</td>
+                    </tr>
+                    <tr>
+                      <td><a href="http://www.meetup.com/virtualrealityto/" target="_blank" rel="noopener">VRTO (Virtual Reality, Toronto) #VRToronto</a></td>
+                      <td>Ontario</td>
+                      <td>Canada</td>
+                    </tr>
+                    <tr>
+                      <td><a href="http://www.meetup.com/Kaleido-TR/" target="_blank" rel="noopener">Kaleidoscope TR // Virtual Reality Film, Art, & Experiences</a> (Toronto)</td>
+                      <td>Ontario</td>
+                      <td>Canada</td>
+                    </tr>
+                    <tr>
+                      <td><a href="http://www.meetup.com/Waterloo-Virtual-and-Augmented-Reality-Meetup/" target="_blank" rel="noopener">Waterloo VR/AR - Virtual and Augmented Reality Meetup</a></td>
+                      <td>Ontario</td>
+                      <td>Canada</td>
+                    </tr>
+                    <tr>
+                      <td><a href="http://www.meetup.com/MTLVR-MONTREAL-VIRTUAL-REALITY/" target="_blank" rel="noopener">MTLVR: Montreal Virtual Reality </a></td>
+                      <td>Quebec</td>
+                      <td>Canada</td>
+                    </tr>
+                    <tr>
+                      <td><a href="http://www.meetup.com/Osmos-Academy/" target="_blank" rel="noopener">Osmos Academy - Montreal: Technology for Good Meetup </a></td>
+                      <td>Quebec</td>
+                      <td>Canada</td>
+                    </tr>
+                    <tr>
+                      <td><a href="http://www.meetup.com/VanVirtualReality/" target="_blank" rel="noopener">VanVR</a> (Vancouver)</td>
+                      <td>British Columbia</td>
+                      <td>Canada</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="http://www.meetup.com/VirtualHandVancouver/" target="_blank" rel="noopener">Virtual Hand - Oculus & Virtual Reality for Professionals</a> (Vancouver)</td>
+                      <td>British Columbia</td>
+                      <td>Canada</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="http://www.meetup.com/kaleido-van/" target="_blank" rel="noopener">Kaleidoscope VAN // Virtual Reality Film, Art, & Experiences</a> (Vancouver)</td>
+                      <td>British Columbia</td>
+                      <td>Canada</td>
+                    </tr>
+
+
+
+
+
+
+
+                    <!-- 	UNITED STATES 	-->
+
+
+
+
+                    <!-- Alabama -->
+                    <!-- Alaska -->
+
+
+
+                    <!-- Arizona -->
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/AZVR-Meetup/" target="_blank" rel="noopener">AZ Virtual Reality Meetup</a> (Scottsdale)</td>
+                      <td>Arizona</td>
+                      <td>United States</td>
+                    </tr>
+
+
+                    <!-- Arkansas -->
+
+
+
+
+                    <!-- California -->
+
+
+                    <tr>
+                      <td><a href="http://www.meetup.com/East-Bay-virtual-reality/" target="_blank" rel="noopener">East Bay Virtual Reality</a> (Berkeley)</td>
+                      <td>California</td>
+                      <td>United States</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="http://www.meetup.com/SiliconValleyVirtualReality/" target="_blank" rel="noopener">SVVR (Silicon Valley Virtual Reality)</a>  (Mountain View)</td>
+                      <td>California</td>
+                      <td>United States</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="http://www.meetup.com/San-Francisco-AR-VR-Meetup-for-Women-and-Allies/" target="_blank" rel="noopener">AR VR Women</a>  (San Francisco)</td>
+                      <td>California</td>
+                      <td>United States</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="http://www.meetup.com/virtualreality/" target="_blank" rel="noopener">SFVR - San Francisco Virtual Reality</a>  (San Francisco)</td>
+                      <td>California</td>
+                      <td>United States</td>
+                    </tr>
+                    <tr>
+                      <td><a href="http://www.meetup.com/UploadVR/" target="_blank" rel="noopener">Upload SF - VR & AR Meetup Group</a>  (San Francisco)</td>
+                      <td>California</td>
+                      <td>United States</td>
+                    </tr>
+                    <tr>
+                      <td><a href="http://www.meetup.com/Embrace-VR-San-Francisco/" target="_blank" rel="noopener">Embrace VR San Francisco</a>  (San Francisco)</td>
+                      <td>California</td>
+                      <td>United States</td>
+                    </tr>
+                    <tr>
+                      <td><a href="http://www.meetup.com/GameDevArtTechSF/" target="_blank" rel="noopener">gdat: Game Dev Art & Tech - San Francisco</a>  (San Francisco)</td>
+                      <td>California</td>
+                      <td>United States</td>
+                    </tr>
+                    <tr>
+                      <td><a href="http://www.meetup.com/Web-VR/" target="_blank" rel="noopener">Web VR</a>  (San Francisco)</td>
+                      <td>California</td>
+                      <td>United States</td>
+                    </tr>
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Non-Gaming-VR/" target="_blank" rel="noopener">Non-Gaming Virtual Reality</a>  (San Francisco)</td>
+                      <td>California</td>
+                      <td>United States</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="http://www.meetup.com/Women-in-VR/" target="_blank" rel="noopener">Women in VR</a>   (Los Angeles)</td>
+                      <td>California</td>
+                      <td>United States</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="http://www.meetup.com/LAUnity3D/" target="_blank" rel="noopener">LA Unity - Meetup</a>  (Los Angeles)</td>
+                      <td>California</td>
+                      <td>United States</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="http://www.meetup.com/virtualrealityla/" target="_blank" rel="noopener">VRLA - Virtual Reality Los Angeles</a>  (Los Angeles)</td>
+                      <td>California</td>
+                      <td>United States</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="http://www.meetup.com/Los-Angeles-VR-and-Immersive-Technologies-Meetup/" target="_blank" rel="noopener">Los Angeles VR & Immersive Technologies Meetup</a> (Los Angeles)</td>
+                      <td>California</td>
+                      <td>United States</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="http://www.meetup.com/San-Diego-Virtual-Reality/" target="_blank" rel="noopener">San Diego Virtual Reality Meetup (SDVR)</a> (San Diego)</td>
+                      <td>California</td>
+                      <td>United States</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="http://www.meetup.com/OC-Virtual-Reality-Meetup/" target="_blank" rel="noopener">Orange County VR Meetup</a>  (Irvine)</td>
+                      <td>California</td>
+                      <td>United States</td>
+                    </tr>
+
+
+
+                    <!-- Colorado -->
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Colorado-VR/" target="_blank" rel="noopener">Colorado Virtual Reality - COVR</a>  (Westminster)</td>
+                      <td>Colorado</td>
+                      <td>United States</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Denver-VR-Meetup/" target="_blank" rel="noopener">Denver Virtual Reality Meetup</a></td>
+                      <td>Colorado</td>
+                      <td>United States</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/AR-VR-Play-Place/" target="_blank" rel="noopener">AR & VR Play Place</a>  (Denver)</td>
+                      <td>Colorado</td>
+                      <td>United States</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Springs-Virtual-Reality/" target="_blank" rel="noopener">Springs Virtual Reality</a>  (Colorado Springs)</td>
+                      <td>Colorado</td>
+                      <td>United States</td>
+                    </tr>
+
+
+
+                    <!-- Connecticut -->
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Stamford-Developers-Meetup/" target="_blank" rel="noopener">Stamford Developers Meetup</a> (Stamford)</td>
+                      <td>Connecticut</td>
+                      <td>United States</td>
+                    </tr>
+
+                    <!-- Delaware -->
+
+
+
+                    <!-- Florida -->
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Orlando-Virtual-Reality/" target="_blank" rel="noopener">OVR</a> Orlando Virtual Reality</td>
+                      <td>Florida</td>
+                      <td>United States</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/MiamiVR/" target="_blank" rel="noopener">MiamiVR</a> (Miami)</td>
+                      <td>Florida</td>
+                      <td>United States</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/BocaVR/" target="_blank" rel="noopener">BocaVR</a> (Boca Raton)</td>
+                      <td>Florida</td>
+                      <td>United States</td>
+                    </tr>
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Jax-Virtual-Reality/" target="_blank" rel="noopener">Jax Virtual Reality</a> (Jacksonville)</td>
+                      <td>Florida</td>
+                      <td>United States</td>
+                    </tr>
+
+
+                    <!-- Georgia -->
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Atlanta-Virtual-Reality-Meetup/" target="_blank" rel="noopener">Atlanta Virtual Reality Meetup</a> (Atlanta)</td>
+                      <td>Georgia</td>
+                      <td>United States</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Atlanta-Mixed-Reality-Meetup/" target="_blank" rel="noopener">Atlanta Mixed Reality Meetup</a> (Atlanta)</td>
+                      <td>Georgia</td>
+                      <td>United States</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Atlanta-HoloLens-Meetup/" target="_blank" rel="noopener">Atlanta HoloLens Meetup</a> (Atlanta)</td>
+                      <td>Georgia</td>
+                      <td>United States</td>
+                    </tr>
+
+
+                    <!-- Hawaii -->
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/HawaiiVR/" target="_blank" rel="noopener">Hawaii Virtual Reality</a> (Honolulu)</td>
+                      <td>Hawaii</td>
+                      <td>United States</td>
+                    </tr>
+                    <tr>
+                      <td><a href="https://www.meetup.com/Film-360-VR-Hawaii/" target="_blank" rel="noopener">Film 360/VR Hawaii</a> (Honolulu)</td>
+                      <td>Hawaii</td>
+                      <td>United States</td>
+                    </tr>
+
+
+                    <!-- Idaho -->
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Idaho-Virtual-Reality/" target="_blank" rel="noopener">Idaho Virtual Reality</a> (Boise)</td>
+                      <td>Idaho</td>
+                      <td>United States</td>
+                    </tr>
+
+
+                    <!-- Illinois -->
+
+
+                    <tr>
+                      <td><a href="http://www.meetup.com/chicagovirtualreality/" target="_blank" rel="noopener">ChicagoVR</a> (Chicago)</td>
+                      <td>Illinois</td>
+                      <td>United States</td>
+                    </tr>
+                    <tr>
+                      <td><a href="http://www.meetup.com/CHIVR-Chicago-Virtual-Reality/" target="_blank" rel="noopener">ChiVR - Virtual and Augmented Reality Meetup</a> (Chicago)</td>
+                      <td>Illinois</td>
+                      <td>United States</td>
+                    </tr>
+                    <tr>
+                      <td><a href="https://www.meetup.com/ImmersiveTechnology/" target="_blank" rel="noopener">Immersive Technology</a> (Chicago)</td>
+                      <td>Illinois</td>
+                      <td>United States</td>
+                    </tr>
+
+
+
+                    <!-- Indiana -->
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Indianapolis-Virtual-Reality-Meetup/" target="_blank" rel="noopener">Indianapolis Virtual Reality Meetup</a> (Carmel)</td>
+                      <td>Indiana</td>
+                      <td>United States</td>
+                    </tr>
+
+
+                    <!-- Kansas -->
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/KC-VR1/" target="_blank" rel="noopener">KCVR</a> (Lenexa)</td>
+                      <td>Kansas</td>
+                      <td>United States</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/KC-Virtual-Reality-Meetup/" target="_blank" rel="noopener">KC Virtual Reality Meetup</a> (Kansas City)</td>
+                      <td>Kansas</td>
+                      <td>United States</td>
+                    </tr>
+
+
+                    <!-- Kentucky -->
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/NKY-Cincinnati-Maker-Meetup/" target="_blank" rel="noopener">NKY/Cincinnati Maker Meetup</a> (Covington)</td>
+                      <td>Kentucky</td>
+                      <td>United States</td>
+                    </tr>
+
+
+                    <!-- Louisiana -->
+
+
+                    <!-- Maine -->
+
+
+
+                    <!-- Maryland -->
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/BmoreVR/" target="_blank" rel="noopener">BmoreVR</a>  (Baltimore)</td>
+                      <td>Maryland</td>
+                      <td>United States</td>
+                    </tr>
+
+
+
+                    <!-- Massachusetts -->
+
+
+                    <tr>
+                      <td><a href="http://www.meetup.com/Boston-Virtual-Reality/" target="_blank" rel="noopener">Boston VR</a></td>
+                      <td>Massachusetts</td>
+                      <td>United States</td>
+                    </tr>
+
+
+
+                    <!-- Michigan -->
+                    <!-- Minnesota -->
+                    <!-- Mississippi -->
+                    <!-- Missouri -->
+                    <!-- Montana -->
+                    <!-- Nebraska -->
+
+
+
+
+                    <!-- Nevada -->
+
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Las-Vegas-Virtual-Reality-Meetup/" target="_blank" rel="noopener">Virtual Reality Las Vegas Meetup</a> (Las Vegas)</td>
+                      <td>Nevada</td>
+                      <td>United States</td>
+                    </tr>
+
+                    <!-- New Hampshire -->
+
+
+
+
+
+                    <!-- New Jersey -->
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/NJVR-NewJersey-Virtual-Reality/" target="_blank" rel="noopener">New Jersey Virtual Reality (NJVR) Meetup</a> (Marlboro)</td>
+                      <td>New Jersey</td>
+                      <td>United States</td>
+                    </tr>
+
+
+
+
+                    <!-- New Mexico -->
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/VR-NewMexico/" target="_blank" rel="noopener">VR New Mexico</a> (Albuquerque)</td>
+                      <td>New Mexico</td>
+                      <td>United States</td>
+                    </tr>
+
+
+                    <!-- New York -->
+
+
+                    <tr>
+                      <td><a href="http://www.meetup.com/Hardwired-NYC/" target="_blank" rel="noopener">Hardwired NYC</a> (New York City)</td>
+                      <td>New York</td>
+                      <td>United States</td>
+                    </tr>
+                    <tr>
+                      <td><a href="http://www.meetup.com/NYVR-Virtual-Reality-NYC/" target="_blank" rel="noopener">(NYVR) Virtual Reality NYC</a> (New York City)</td>
+                      <td>New York</td>
+                      <td>United States</td>
+                    </tr>
+                    <tr>
+                      <td><a href="http://www.meetup.com/gdgnyc/" target="_blank" rel="noopener">Official Google Developer Group (New York City)</a></td>
+                      <td>New York</td>
+                      <td>United States</td>
+                    </tr>
+                    <tr>
+                      <td><a href="http://www.meetup.com/NY-Women-In-VR/" target="_blank" rel="noopener">NY Women in VR</a> (New York City)</td>
+                      <td>New York</td>
+                      <td>United States</td>
+                    </tr>
+                    <tr>
+                      <td><a href="http://www.meetup.com/NYCVRU/" target="_blank" rel="noopener">NYC VR U</a> (New York City)</td>
+                      <td>New York</td>
+                      <td>United States</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://ameliawb.github.io/vrsalon/" target="_blank" rel="noopener">Salon VR</a> (New York City)</td>
+                      <td>New York</td>
+                      <td>United States</td>
+                    </tr>
+
+
+
+                    <!-- North Carolina -->
+
+
+
+                    <tr>
+                      <td><a href="http://www.meetup.com/Charlotte-Virtual-Reality-Meetup/" target="_blank" rel="noopener">Charlotte Virtual Reality Meetup</a></td>
+                      <td>North Carolina</td>
+                      <td>United States</td>
+                    </tr>
+                    <tr>
+                      <td><a href="http://www.meetup.com/RTP-Virtual-Reality/" target="_blank" rel="noopener">RTP Virtual Reality</a> (Raleigh)</td>
+                      <td>North Carolina</td>
+                      <td>United States</td>
+                    </tr>
+                    <tr>
+                      <td><a href="https://www.meetup.com/Triad-Virtual-Reality-Meetup/" target="_blank" rel="noopener">Triad Virtual Reality Meetup</a> (Winston Salem)</td>
+                      <td>North Carolina</td>
+                      <td>United States</td>
+                    </tr>
+
+
+
+                    <!-- North Dakota -->
+
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Fargo-Virtual-Reality-Meetup/" target="_blank" rel="noopener">Fargo Virtual Reality Meetup</a></td>
+                      <td>North Dakota</td>
+                      <td>United States</td>
+                    </tr>
+
+
+
+                    <!-- Ohio -->
+
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Akron-Virtual-Reality-Meetup/" target="_blank" rel="noopener">Akron Virtual Reality Meetup</a></td>
+                      <td>Ohio</td>
+                      <td>United States</td>
+                    </tr>
+                    <tr>
+                      <td><a href="https://www.meetup.com/Cleveland-Virtual-Reality-Meetup/" target="_blank" rel="noopener">Cleveland Virtual Reality Meetup</a></td>
+                      <td>Ohio</td>
+                      <td>United States</td>
+                    </tr>
+                    <tr>
+                      <td><a href="https://www.meetup.com/Cincinnati-Dayton-Virtual-Reality/" target="_blank" rel="noopener">Cincinnati \ Dayton Virtual Reality</a></td>
+                      <td>Ohio</td>
+                      <td>United States</td>
+                    </tr>
+                    <tr>
+                      <td><a href="https://www.meetup.com/Cincinnati-Virtual-Reality/" target="_blank" rel="noopener">Cincinnati Virtual Reality</a></td>
+                      <td>Ohio</td>
+                      <td>United States</td>
+                    </tr>
+                    <tr>
+                      <td><a href="https://www.meetup.com/VR-Columbus/" target="_blank" rel="noopener">VR Columbus</a></td>
+                      <td>Ohio</td>
+                      <td>United States</td>
+                    </tr>
+
+
+                    <!-- Oklahoma -->
+
+
+
+
+
+                    <!-- Oregon -->
+
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Portland-Virtual-Reality-Meetup/" target="_blank" rel="noopener">Portland Virtual Reality Meetup</a></td>
+                      <td>Oregon</td>
+                      <td>United States</td>
+                    </tr>
+
+
+
+                    <!-- Pennsylvania -->
+
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/vrphilly/" target="_blank" rel="noopener">VR Philly</a> (Philadelphia)</td>
+                      <td>Pennsylvania</td>
+                      <td>United States</td>
+                    </tr>
+                    <tr>
+                      <td><a href="https://www.meetup.com/Greater-Philadelphia-Virtual-Augmented-Reality-Group/" target="_blank" rel="noopener">Greater Philadelphia Virtual & Augmented Reality Group</a></td>
+                      <td>Pennsylvania</td>
+                      <td>United States</td>
+                    </tr>
+                    <tr>
+                      <td><a href="https://www.meetup.com/Pittsburgh-VR-Meetup/" target="_blank" rel="noopener">Pittsburgh VR Meetup</a> </td>
+                      <td>Pennsylvania</td>
+                      <td>United States</td>
+                    </tr>
+                    <tr>
+                      <td><a href="https://www.meetup.com/Steel-City-Virtual-Reality-Enthusiasts/" target="_blank" rel="noopener">Steel City Virtual Reality Enthusiasts</a> (Pittsburgh)</td>
+                      <td>Pennsylvania</td>
+                      <td>United States</td>
+                    </tr>
+
+
+
+                    <!-- Rhode Island -->
+                    <!-- South Carolina -->
+                    <!-- South Dakota -->
+
+
+
+
+                    <!-- Tennessee -->
+
+
+
+                    <tr>
+                      <td><a href="http://www.meetup.com/VARDNet-The-Virtual-Augmented-Reality-Developers-Network/" target="_blank" rel="noopener">VARDNet The Virtual Augmented Reality Developers Network</a> (Knoxville)</td>
+                      <td>Tennessee</td>
+                      <td>United States</td>
+                    </tr>
+
+
+
+                    <!-- Texas -->
+
+
+
+                    <tr>
+                      <td><a href="http://www.meetup.com/VRAustin/" target="_blank" rel="noopener">VR Austin Meetup</a> (Austin)</td>
+                      <td>Texas</td>
+                      <td>United States</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/DallasVR/" target="_blank" rel="noopener">Dallas VR - Virtual Reality Meetup</a></td>
+                      <td>Texas</td>
+                      <td>United States</td>
+                    </tr>
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Houston-VR/" target="_blank" rel="noopener">Houston VR</a></td>
+                      <td>Texas</td>
+                      <td>United States</td>
+                    </tr>
+
+
+
+
+
+
+                    <!-- Utah -->
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/UtahVR/" target="_blank" rel="noopener">Utah Virtual Reality</a> (Salt Lake City)</td>
+                      <td>Utah</td>
+                      <td>United States</td>
+                    </tr>
+
+
+                    <!-- Vermont -->
+
+
+                    <!-- Virginia -->
+
+
+                    <!-- Washington -->
+
+
+
+                    <tr>
+                      <td><a href="http://www.meetup.com/Seattle-Virtual-Reality-Meetup-Group/" target="_blank" rel="noopener">Seattle Virtual Reality Meetup</a></td>
+                      <td>Washington</td>
+                      <td>United States</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="http://www.meetup.com/Seattle-Virtual-Reality/" target="_blank" rel="noopener">Seattle Virtual Reality</a></td>
+                      <td>Washington</td>
+                      <td>United States</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="http://www.meetup.com/Seattle-VR-Audio-Meetup/" target="_blank" rel="noopener">Seattle VR Audio Meetup</a></td>
+                      <td>Washington</td>
+                      <td>United States</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/SeAR-Seattle-Augmented-Reality/" target="_blank" rel="noopener">SeAR: The Seattle Augmented Reality Meetup</a></td>
+                      <td>Washington</td>
+                      <td>United States</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="http://www.meetup.com/Virtual-Reality-Enthusiasts/" target="_blank" rel="noopener">Virtual Reality Enthusiasts</a> (Seattle)</td>
+                      <td>Washington</td>
+                      <td>United States</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Eastside-Virtual-Reality-Meetup/" target="_blank" rel="noopener">Eastside Virtual Reality Meetup</a> (Bellevue)</td>
+                      <td>Washington</td>
+                      <td>United States</td>
+                    </tr>
+
+                    <!-- West Virginia -->
+
+
+                    <!-- Wisconsin -->
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Madison-VR/" target="_blank">Madison VR</a></td>
+                      <td>Wisconsin</td>
+                      <td>United States</td>
+                    </tr>
+
+
+                    <!-- Wyoming -->
+
+
+                    <!-- Washington, D.C. -->
+
+                    <tr>
+                      <td><a href="http://www.meetup.com/Virtual-Reality-DCVR/" target="_blank" rel="noopener">DC Virtual Reality (@DCVRmeetup)</a> (Washington, DC)</td>
+                      <td>District of Columbia</td>
+                      <td>United States</td>
+                    </tr>
+
+
+
+                    <!-- END OF UNITED STATES MEETUP INFO -->
+
+
+
+
+
+
+
+
+
+                    <!--   START OF THE SOUTH AMERICAN MEETUP INFO -->
+
+
+                    <!-- MEXICO -->
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/mxvrco/" target="_blank" rel="noopener">MXVR - Mexico Virtual Reality</a>  (México City)</td>
+                      <td>Distrito Federal</td>
+                      <td>Mexico</td>
+                    </tr>
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/RealidadAumentada/" target="_blank" rel="noopener">Realidad Aumentada Ciudad de Mexico</a>  (México City)</td>
+                      <td>Distrito Federal</td>
+                      <td>Mexico</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/WebVR-CDMX/" target="_blank" rel="noopener">WebVR CDMX</a>  (México City)</td>
+                      <td>Distrito Federal</td>
+                      <td>Mexico</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Gaming-Meetup-de-Realidad-Virtual-en-VR-City/" target="_blank" rel="noopener">MTY Gaming Meetup de Realidad Virtual en VR City</a>  (Monterrey)</td>
+                      <td>Nuevo León</td>
+                      <td>Mexico</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/WebGLMX/" target="_blank" rel="noopener">WebGLMX</a>  (Cuauhtémoc)</td>
+                      <td>Mexico City/DF</td>
+                      <td>Mexico</td>
+                    </tr>
+
+
+
+                    <!-- Guatemala -->
+                    <!--Belize -->
+                    <!--Honduras  -->
+                    <!--El Salvador -->
+                    <!--Nicaragua -->
+                    <!--Costa Rica -->
+                    <!--Panama -->
+
+
+
+                    <!-- Cuba -->
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/CubanTech/" target="_blank" rel="noopener">CubanTech Meetups</a>  (Havana)</td>
+                      <td>Havana</td>
+                      <td>Cuba</td>
+                    </tr>
+
+
+                    <!-- Haiti -->
+                    <!--Dominica Republic -->
+                    <!--Puerto Rico  -->
+
+
+
+
+                    <!--Colombia -->
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Comunidad-de-Realidad-Virtual-en-Colombia/" target="_blank" rel="noopener">Comunidad de Realidad Virtual en Colombia</a>  (Bogotá)</td>
+                      <td>Capital District</td>
+                      <td>Colombia</td>
+                    </tr>
+
+
+
+                    <!-- Venezuela -->
+                    <!-- Ecuador -->
+
+
+
+                    <!-- Peru -->
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Programadores-profesionales-de-Unity3d/" target="_blank" rel="noopener">Programadores profesionales de Unity3d</a>  (Lima)</td>
+                      <td>Lima</td>
+                      <td>Peru</td>
+                    </tr>
+
+
+
+                    <!-- Bolivia -->
+
+
+
+
+                    <!-- Brazil -->
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/SP-Realidade-Virtual/" target="_blank" rel="noopener">SP - Realidade Virtual</a>  (Sao Paulo)</td>
+                      <td>São Paulo</td>
+                      <td>Brazil</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Futurologia-e-Inovacao/" target="_blank" rel="noopener">Futurologia & Inovação</a>  (Sao Paulo)</td>
+                      <td>São Paulo</td>
+                      <td>Brazil</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/uesampa/" target="_blank" rel="noopener">Unreal Engine Sao Paulo</a></td>
+                      <td>São Paulo</td>
+                      <td>Brazil</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/unitybrazil/" target="_blank" rel="noopener">Unity Brazil</a>  (Sao Paulo, Brazil)</td>
+                      <td>São Paulo</td>
+                      <td>Brazil</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Game-Developers-Brazil/" target="_blank" rel="noopener">GDBR - Game Developers Brazil</a>  (Sao Paulo)</td>
+                      <td>São Paulo</td>
+                      <td>Brazil</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/I-Love-3D-Sao-Paulo/" target="_blank" rel="noopener">I Love 3D - Sao Paulo</a>  (São Paulo)</td>
+                      <td>São Paulo</td>
+                      <td>Brazil</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/BrasilVR/" target="_blank" rel="noopener">Brasil VR</a>  (Sao Paulo)</td>
+                      <td>São Paulo</td>
+                      <td>Brazil</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Sao-Paulo-Virtual-Reality-Meetup/" target="_blank" rel="noopener">São Paulo Virtual Reality Meetup</a>  (Sao Paulo)</td>
+                      <td>São Paulo</td>
+                      <td>Brazil</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/RVA-SJC-Realidade-Virtual-e-Aumentada-SJC-Meetup/" target="_blank" rel="noopener">RVA-SJC - Realidade Virtual e Aumentada SJC Meetup</a>  (Sao José dos Campos)</td>
+                      <td>São Paulo</td>
+                      <td>Brazil</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Belo-Horizonte-Mixed-Reality-Meetup/" target="_blank" rel="noopener">Belo Horizonte Mixed Reality Meetup</a>  (Belo Horizontec)</td>
+                      <td>Minas Gerais </td>
+                      <td>Brazil</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Virtual-Reality-VR-Sao-Paulo/" target="_blank" rel="noopener">Virtual Reality (VR) São Paulo</a>  (Sao Paulo)</td>
+                      <td>São Paulo</td>
+                      <td>Brazil</td>
+                    </tr>
+
+
+                    <!-- Chile -->
+                    <!-- Paraguay -->
+
+
+
+                    <!-- Uruguay -->
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/VR-Meetup-Montevideo/" target="_blank" rel="noopener">VR Meetup Montevideo</a></td>
+                      <td>Montevideo</td>
+                      <td>Uruguay</td>
+                    </tr>
+
+                    <!-- Argentina -->
+
+
+
+                    <!--   END OF THE SOUTH AMERICAN MEETUP INFO -->
+
+
+
+
+
+
+
+                    <!--   START OF THE EUROPEAN MEETUP INFO -->
+
+
+
+
+                    <!-- ENGLAND, UK. -->
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Augmenting-Reality/" target="_blank" rel="noopener">Augmenting Reality</a>  (London)</td>
+                      <td>Greater London</td>
+                      <td>England</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/bristech/" target="_blank" rel="noopener">Bristech</a>  (Bristol)</td>
+                      <td>South West England</td>
+                      <td>England</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/vrlondon/" target="_blank" rel="noopener">VRLO | Virtual Reality London</a></td>
+                      <td>Greater London</td>
+                      <td>England</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/London-Virtual-Reality-Developer-Meetup/" target="_blank" rel="noopener">London Virtual Reality Developer Meetup</a></td>
+                      <td>Greater London</td>
+                      <td>England</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Heads-Up-London-Wearable-Technology-Forum/" target="_blank" rel="noopener">Heads Up London - Wearable Technology Forum</a></td>
+                      <td>Greater London</td>
+                      <td>England</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/London-VR-for-Games-Meetup/" target="_blank" rel="noopener">London VR for Games Meetup</a></td>
+                      <td>Greater London</td>
+                      <td>England</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Kaleido-LDN/" target="_blank" rel="noopener">Kaleidoscope LONDON // Virtual Reality Creators</a></td>
+                      <td>Greater London</td>
+                      <td>England</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/VRManchester/" target="_blank" rel="noopener">VR Manchester</a>  (Greater Manchester)</td>
+                      <td>North West England</td>
+                      <td>England</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/VR-AR-Association-London/" target="_blank" rel="noopener">VR/AR Association - London</a></td>
+                      <td>Greater London</td>
+                      <td>England</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/London-Unreal-Engine-Meetup/" target="_blank" rel="noopener">London Unreal Engine Meetup</a>  </td>
+                      <td>Greater London</td>
+                      <td>England</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/london-hololens/" target="_blank" rel="noopener">London HoloLens Usergroup</a></td>
+                      <td>Greater London</td>
+                      <td>England</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Virtual-Augmented-Mixed-Reality-London/" target="_blank" rel="noopener">Virtual,l Augmented, & Mixed Reality London</a></td>
+                      <td>Greater London</td>
+                      <td>England</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Yorkshire-Virtual-Reality/" target="_blank" rel="noopener">YorkshireVR</a>  (Knaresboroug­h)</td>
+                      <td>Yorkshire and the Humber</td>
+                      <td>England</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Medical-Realities/" target="_blank" rel="noopener">Medical Realities</a>  (London)</td>
+                      <td>Greater London</td>
+                      <td>England</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Digilab-Meetup/" target="_blank" rel="noopener">Digilab Meetup</a>  (Barking)</td>
+                      <td>Greater London</td>
+                      <td>England</td>
+                    </tr>
+
+
+                    <!-- Ireland -->
+
+
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/3DcampDublin/" target="_blank">3Dcamp Dublin</a></td>
+                      <td>Leinster</td>
+                      <td>Ireland</td>
+                    </tr>
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/IRE-VR/" target="_blank">IRISH VR</a> (Dublin)</td>
+                      <td>Leinster</td>
+                      <td>Ireland</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Dublin-Virtual-Reality-Meetup/" target="_blank">Dublin Virtual Reality</a></td>
+                      <td>Leinster</td>
+                      <td>Ireland</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/3DcampWaterford/" target="_blank">3Dcamp Waterford</a></td>
+                      <td>Munster</td>
+                      <td>Ireland</td>
+                    </tr>
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Dublin-WebGL-Meetup/" target="_blank">Dublin WebGl Meetup</a></td>
+                      <td>Leinster</td>
+                      <td>Ireland</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Cork-Virtual-Reality-Meetup/" target="_blank">Cork Virtual Reality Meetup</a></td>
+                      <td>Munster</td>
+                      <td>Ireland</td>
+                    </tr>
+
+
+
+                    <!--  FRANCE  -->
+
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Nuage-Cafe/" target="_blank">Nuage Café</a> (Paris)</td>
+                      <td>Île-de-France</td>
+                      <td>France</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/glasscamp/" target="_blank">Glass Camp</a> (Paris)</td>
+                      <td>Île-de-France</td>
+                      <td>France</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Paris-Realites-Alternatives/" target="_blank">Paris Réalités Alternatives</a></td>
+                      <td>Île-de-France</td>
+                      <td>France</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/LIVR-Lille-Virtual-Reality/" target="_blank">LIVR - Lille Virtual Reality </a></td>
+                      <td>Hauts-de-France</td>
+                      <td>France</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Virtual-Meetups-Paris/" target="_blank">Virtual Meetups Paris</a></td>
+                      <td>Île-de-France</td>
+                      <td>France</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Paris-Transhumanisme/" target="_blank">Paris Transhumanisme</a></td>
+                      <td>Île-de-France</td>
+                      <td>France</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Nantes-Realite-Virtuelle/" target="_blank">Nantes Réalité Virtuelle</a></td>
+                      <td>Pays de la Loire</td>
+                      <td>France</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/GDGNice/" target="_blank">Google Developer Group Nice</a></td>
+                      <td>Provence-Alpes-Côte d'Azur</td>
+                      <td>France</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Lyon-Digital-Art-lnterdisciplinary-Media/" target="_blank">Lyon Digital Art & lnterdisciplinary Media</a></td>
+                      <td>Auvergne-Rhône-Alpes</td>
+                      <td>France</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Mixed-Reality-In-Paris/" target="_blank">Mixed Reality Paris</a></td>
+                      <td>Île-de-France</td>
+                      <td>France</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/StrasVR/" target="_blank">StrasVR</a> (Strasbourg)</td>
+                      <td>Grand Est</td>
+                      <td>France</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Blue-Mirror/" target="_blank">Blue Mirror</a></td>
+                      <td>Île-de-France</td>
+                      <td>France</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/XVRRAA-Explorons-la-Virtual-Reality-Rhone-Alpes-Auvergne/" target="_blank">XVRRAA - Explorons la Virtual Reality Rhone Alpes Auvergne</a> (Lyon)</td>
+                      <td>Auvergne-Rhône-Alpes</td>
+                      <td>France</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Les-Bricodeurs-a-Grenoble/" target="_blank">Les Bricodeurs à Grenoble</a></td>
+                      <td>Auvergne-Rhône-Alpes</td>
+                      <td>France</td>
+                    </tr>
+
+
+
+                    <!--  GERMANY  -->
+
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Berlin-Virtual-Reality-Meetup/" target="_blank">Virtual Reality Berlin</a></td>
+                      <td>Brandenburg</td>
+                      <td>Germany</td>
+                    </tr>
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/BerlinGameScene/" target="_blank">BerlinGameScene.com</a></td>
+                      <td>Brandenburg</td>
+                      <td>Germany</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/spektrum/" target="_blank">SPEKTRUM | art science community</a> (Berlin)</td>
+                      <td>Brandenburg</td>
+                      <td>Germany</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Singularity-meets-Self-Improvement-in-Berlin/" target="_blank">Singularity meets Self-Improvement in Berlin</a></td>
+                      <td>Brandenburg</td>
+                      <td>Germany</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Cologne-Virtual-Reality-Meetup/" target="_blank">Cologne Virtual Reality Meetup</a></td>
+                      <td>North Rhine-Westphalia</td>
+                      <td>Germany</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Stuttgart-VR-AR-Meetup/" target="_blank">Stuttgart Virtual & Augmented Reality Meetup</a></td>
+                      <td>Baden-Württemberg</td>
+                      <td>Germany</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Frankfurt-Virtual-Augmented-Reality/" target="_blank">Frankfurt - Virtual and Augmented Reality</a></td>
+                      <td>Hesse</td>
+                      <td>Germany</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/HoloLens-Meetup-Germany/" target="_blank">HoloLens Meetup Germany</a> (Munchen/Munich)</td>
+                      <td>Bavaria</td>
+                      <td>Germany</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/ARMUC-Augmented-Reality-Stammtisch-Munchen/" target="_blank">ARMUC - Augmented Reality Stammtisch Munchen</a> (Munich)</td>
+                      <td>Bavaria</td>
+                      <td>Germany</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Munchen-Mixed-Reality-Meetup/" target="_blank">Munchen Mixed Reality Meetup</a> (Munich)</td>
+                      <td>Bavaria</td>
+                      <td>Germany</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Munchen-Science-Fiction-Mixed-Media-Makers/" target="_blank">Munchen Mixed Media Makers</a> (Munich)</td>
+                      <td>Bavaria</td>
+                      <td>Germany</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Virtual-Reality-Germany/" target="_blank">Virtual Reality Germany</a> (Munchen/Munich)</td>
+                      <td>Bavaria</td>
+                      <td>Germany</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Virtual-Reality-Hamburg/" target="_blank">Virtual Reality Hamburg</a></td>
+                      <td>Hamburg</td>
+                      <td>Germany</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/VRxD-Berlin/" target="_blank">Virtual Reality Experience Design (VRxD) Berlin</a></td>
+                      <td>Brandenburg</td>
+                      <td>Germany</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/varhackers/" target="_blank">Reality Hackers VR/AR</a> (Berlin)</td>
+                      <td>Brandenburg</td>
+                      <td>Germany</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Berlin-Room-Scale-VR-Developers-Meetup/" target="_blank">Room-Scale VR Developers Group</a> (Berlin)</td>
+                      <td>Brandenburg</td>
+                      <td>Germany</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/VR-in-Science-Science-in-VR/" target="_blank">VR in Science - Science in VR</a> (Berlin)</td>
+                      <td>Brandenburg</td>
+                      <td>Germany</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Berlin-Psy-in-VR-Meetup/" target="_blank">Berlin Psychology in Virtual Reality Meetup</a></td>
+                      <td>Brandenburg</td>
+                      <td>Germany</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/mixedrealityeurope/" target="_blank">Mixed Reality Europe</a> (Berlin)</td>
+                      <td>Brandenburg</td>
+                      <td>Germany</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/AR-VR-Thuringen/" target="_blank">AR/VR Thüringen Meetup</a> (Erfurt)</td>
+                      <td>Thuringia</td>
+                      <td>Germany</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Getting-Started-With-Virtual-Reality-ENKLAVE-Coworking/" target="_blank">Getting Started With Virtual Reality @ ENKLAVE Coworking</a> (Berlin)</td>
+                      <td>Brandenburg</td>
+                      <td>Germany</td>
+                    </tr>
+
+
+
+                    <!-- SPAIN -->
+
+
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/1st-Barcelona-Virtual-Reality-meetup/" target="_blank">Barcelona Virtual Reality meetup</a></td>
+                      <td></td>
+                      <td>Spain</td>
+                    </tr>
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/MATICS-Barcelona-Digital-Art-and-Technology/" target="_blank">MATICS Barcelona: Digital Art and Technology</a></td>
+                      <td></td>
+                      <td>Spain</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Madrid-Oculus-Rift-Developers-Meetup/" target="_blank">Realidad Virtual & Computer Graphics Meetup</a> (Madrid)</td>
+                      <td></td>
+                      <td>Spain</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/RV-RA-Valencia/" target="_blank">Realidad Virtual/Aumentada (Valencia)</a></td>
+                      <td></td>
+                      <td>Spain</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Madrid-Creative-Coding-Meetup/" target="_blank">Madrid Creative Coding Meetup</a></td>
+                      <td></td>
+                      <td>Spain</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Realidad-Virtual-VR-Spain/" target="_blank">Realidad Virtual (VR) Spain</a></td>
+                      <td></td>
+                      <td>Spain</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Creative-VR-Barcelona/" target="_blank">Creative VR Barcelona</a></td>
+                      <td></td>
+                      <td>Spain</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/RealidadVirtualBarcelona/" target="_blank">Realidad Virtual Barcelona - Play the game VR</a></td>
+                      <td></td>
+                      <td>Spain</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Realidad-Virtual-Gamers-y-mundos-virtuales/" target="_blank">Realidad Virtual, Gamers y mundos virtuales</a> (Bilbao)</td>
+                      <td></td>
+                      <td>Spain</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Creative-VR-Barcelona/" target="_blank">Creative VR Barcelona</a></td>
+                      <td></td>
+                      <td>Spain</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Virtual-Reality-Malaga/" target="_blank">Virtual Reality Malaga</a></td>
+                      <td></td>
+                      <td>Spain</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Virtual-Reality-Santiago/" target="_blank">Virtual Reality Santiago</a></td>
+                      <td></td>
+                      <td>Spain</td>
+                    </tr>
+
+
+
+                    <!--  PORTUGAL  -->
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Portugal-Virtual-Reality-Meetup/" target="_blank">Portugal-Virtual Reality Meetup</a> (Lisbon)</td>
+                      <td>Lisbon</td>
+                      <td>Portugal</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/LisbonVirtualReality/" target="_blank">LISBON VIRTUAL REALITY </a></td>
+                      <td>Lisbon</td>
+                      <td>Portugal</td>
+                    </tr>
+
+
+
+
+
+                    <!--  BELGIUM  -->
+
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Virtual-Reality-in-Belgium/" target="_blank">BE.VR - Virtual Reality in Belgium</a> (Brussels)</td>
+                      <td>Brussels</td>
+                      <td>Belgium</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/VR-LAB-Brussels/" target="_blank">VR.LAB Brussels</a></td>
+                      <td>Brussels</td>
+                      <td>Belgium</td>
+                    </tr>
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Microsoft-Innovation-Center-Brussels-Meetup/" target="_blank">Microsoft Innovation Center Brussels Meetup</a></td>
+                      <td>Brussels</td>
+                      <td>Belgium</td>
+                    </tr>
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Virtual-Reality-Belgium/" target="_blank">Virtual Reality Belgium</a> (Brussels)</td>
+                      <td>Brussels</td>
+                      <td>Belgium</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/BE-UNREAL/" target="_blank">BE.UNREAL</a> (Brussels)</td>
+                      <td>Brussels</td>
+                      <td>Belgium</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Game-Audio-Belgium/" target="_blank">Game Audio Belgium</a> (Brussels)</td>
+                      <td>Brussels</td>
+                      <td>Belgium</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Women-in-VR-AR-Europe/" target="_blank">Women in VR/AR Europe</a> (Brussels)</td>
+                      <td>Brussels</td>
+                      <td>Belgium</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/HOLUGbe/" target="_blank">HOLUG.be</a> (Mechelen)</td>
+                      <td>Antwerp</td>
+                      <td>Belgium</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Unreal-West-Vlaanderen/" target="_blank">Unreal West-Vlaanderen</a> (Brugge/Bruges)</td>
+                      <td>West Flanders</td>
+                      <td>Belgium</td>
+                    </tr>
+
+
+
+
+
+                    <!--  NETHERLANDS  -->
+
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/iot-iop/" target="_blank">Internet of Things & Internet of People</a> (Amsterdam)</td>
+                      <td></td>
+                      <td>Netherlands</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/VirtualRealityNL/" target="_blank">VRNL</a> (Amsterdam)</td>
+                      <td></td>
+                      <td>Netherlands</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/VR-020-Meetup/" target="_blank">VR 020 Meetup (Virtual Reality Amsterdam Meetup)</a></td>
+                      <td></td>
+                      <td>Netherlands</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/EUVR-virtual-reality-europe/" target="_blank">EUVR.org - Virtual Reality Europe</a> (Amsterdam)</td>
+                      <td></td>
+                      <td>Netherlands</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/VR-010-Meetup-Virtual-Reality-Rotterdam-Meetup/" target="_blank">VR 010 Meetup (Virtual Reality Rotterdam Meetup)</a></td>
+                      <td></td>
+                      <td>Netherlands</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/VR-GLD/" target="_blank">VR-GLD</a> (Nijmegen)</td>
+                      <td></td>
+                      <td>Netherlands</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Breda-Dev/" target="_blank">Breda Dev</a></td>
+                      <td></td>
+                      <td>Netherlands</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Future-Is-Now-VR-Coaching-Virtual-Reality-The-Hague/" target="_blank">Future Is Now! VR Coaching (Virtual Reality The Hague)</a> (Den Haag)</td>
+                      <td></td>
+                      <td>Netherlands</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Kaleido-AMSTERDAM/" target="_blank">Kaleidoscope AMS // Virtual Reality Film, Art, & Experiences</a> (Amsterdam)</td>
+                      <td></td>
+                      <td>Netherlands</td>
+                    </tr>
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/DutchVRmeetup-040eindhoven/" target="_blank">DutchVRmeetup-040eindhoven</a> (Eindhoven)</td>
+                      <td></td>
+                      <td>Netherlands</td>
+                    </tr>
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Eindhoven-Enterprise-AR-MR-VR-Meetup/" target="_blank">Eindhoven Enterprise AR/MR/VR Meetup</a></td>
+                      <td></td>
+                      <td>Netherlands</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/VR-040/" target="_blank">VR040</a> (Eindhoven)</td>
+                      <td></td>
+                      <td>Netherlands</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Virtual-Experience-Night-Hololens/" target="_blank">Virtual Experience Night</a> (Nieuwegein)</td>
+                      <td></td>
+                      <td>Netherlands</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Dutch-Serious-Virtual-Reality-sometimes-Biofeedback/" target="_blank">Dutch Serious Virtual Reality & sometimes Biofeedback</a> (Amsterdam)</td>
+                      <td></td>
+                      <td>Netherlands</td>
+                    </tr>
+
+
+
+                    <!--  DENMARK  -->
+
+
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/CPH-VR-AR-360/" target="_blank">Copenhagen VR + AR + 360</a></td>
+                      <td></td>
+                      <td>Denmark</td>
+                    </tr>
+
+
+
+
+
+                    <!--  NORWAY  -->
+
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Oslo-VR-Meetup/" target="_blank">Oslo VR Meetup</a></td>
+                      <td></td>
+                      <td>Norway</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Stavanger-VR-Meetup/" target="_blank">Stavanger VR Meetup</a></td>
+                      <td></td>
+                      <td>Norway</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Unreal-Engine-Not-Only-For-Games-Experimental-Meetup/" target="_blank">Unreal Engine Not Only For Games Experimental Meetup</a> (Oslo)</td>
+                      <td></td>
+                      <td>Norway</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Oslo-Unreal-Engine-Meetup/" target="_blank">Oslo Unreal Engine User Group</a></td>
+                      <td></td>
+                      <td>Norway</td>
+                    </tr>
+
+
+
+
+
+                    <!--  Sweden  -->
+
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Stockholm-Virtual-Reality-Meetup/" target="_blank">Stockholm Virtual Reality Meetup</a></td>
+                      <td></td>
+                      <td>Sweden</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Eurostaff-Connect-Stockholm/" target="_blank">Eurostaff Connect: Stockholm - VR/AR</a></td>
+                      <td></td>
+                      <td>Sweden</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Goteborg-VR/" target="_blank">https://www.meetup.com/Goteborg-VR/</a></td>
+                      <td></td>
+                      <td>Sweden</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Kaleido-STO/" target="_blank">Kaleidoscope STO // Virtual Reality Film, Art, & Experiences</a> (Stockholm)</td>
+                      <td></td>
+                      <td>Sweden</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/I-Love-3D-Goteborg/" target="_blank">I Love 3D - Goteborg</a>  (Göteborg)</td>
+                      <td></td>
+                      <td>Sweden</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/videum-vr/" target="_blank">Vaxjo Videum Virtual Reality Meetup </a>  (Växjö</td>
+                      <td></td>
+                      <td>Sweden</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Warp-Meetup/" target="_blank">Warp Meetup</a>  (Stockholm)</td>
+                      <td></td>
+                      <td>Sweden</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Uppsala-VR-AR-Meetup/" target="_blank">Uppsala VR & AR Meetup</a>  (Uppsala)</td>
+                      <td></td>
+                      <td>Sweden</td>
+                    </tr>
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Gothenburg-Virtual-Reality-Meetup/" target="_blank">VR</a>  (Göteborg)</td>
+                      <td></td>
+                      <td>Sweden</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/VR-360-AR-Southern-Sweden/" target="_blank">VR 360° AR Southern Sweden</a>  (Helsingborg)</td>
+                      <td></td>
+                      <td>Sweden</td>
+                    </tr>
+
+
+
+                    <!--  POLAND  -->
+
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/hs3city/" target="_blank">Hacker:space Trójmiasto</a> (Gdansk)</td>
+                      <td></td>
+                      <td>Poland</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Future-Design/" target="_blank">Future Design</a>  (Warsaw)</td>
+                      <td></td>
+                      <td>Poland</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/3City-Virtual-Reality-Devs/" target="_blank">3City Virtual Reality Devs</a> (Gdansk)</td>
+                      <td></td>
+                      <td>Poland</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/GDG-VR-Warszawa/" target="_blank">GDG VR Warszawa</a>  (Warsaw)</td>
+                      <td></td>
+                      <td>Poland</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Warsaw-VR-Meetup/" target="_blank">Warsaw VR Meetup</a></td>
+                      <td></td>
+                      <td>Poland</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Kaleidoscope-Polska/" target="_blank">aleidoscope Polska / Virtual Reality Film & Art Experiences</a> (Lodz/Łódź)</td>
+                      <td></td>
+                      <td>Poland</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/VRup-Krakow-VR-Meetup/" target="_blank">VRup - Kraków VR Meetup</a></td>
+                      <td></td>
+                      <td>Poland</td>
+                    </tr>
+
+
+
+
+
+                    <!--  SWITZERLAND  -->
+
+
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Game-Developers-Zurich/" target="_blank">Game Developers Zürich</a> (Zurich)</td>
+                      <td></td>
+                      <td>Switzerland</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Lausanne-3D-Thursday/" target="_blank">Lausanne 3D Thursday (2D,3D,CGI,vfx, VR, game, etc)</a></td>
+                      <td></td>
+                      <td>Switzerland</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Switzerland-Virtual-Augmented-Reality/" target="_blank">Switzerland Virtual and Augmented Reality</a> (Genève)</td>
+                      <td></td>
+                      <td>Switzerland</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Geneva-VR-AR-Meetup/" target="_blank">Geneva VR/AR Meetup</a></td>
+                      <td></td>
+                      <td>Switzerland</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Zurich-VR-Meetup/" target="_blank">Zürich VR Meetup</a> (Zurich)</td>
+                      <td></td>
+                      <td>Switzerland</td>
+                    </tr>
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Zurich-Virtual-Reality-Meetup/" target="_blank">Zürich Virtual Reality Meetup</a> (Zurich)</td>
+                      <td></td>
+                      <td>Switzerland</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Basel-AR-VR-Group/" target="_blank">Basel AR & VR Group</a></td>
+                      <td></td>
+                      <td>Switzerland</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/VR-awesome-Zurich/" target="_blank">VR awesome Zürich</a> (Zurich)</td>
+                      <td></td>
+                      <td>Switzerland</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/webvr-zh/" target="_blank">Zürich WebVR Meetup</a> (Zurich)</td>
+                      <td></td>
+                      <td>Switzerland</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Unreal-Engine-Schweiz/" target="_blank">Unreal Engine Schweiz</a> (Bischofszell)</td>
+                      <td></td>
+                      <td>Switzerland</td>
+                    </tr>
+
+
+
+
+
+
+                    <!--  ITALY  -->
+
+
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Khronos-Milano-Chapter/" target="_blank">Khronos WebGL Milano </a></td>
+                      <td></td>
+                      <td>Italy</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/I-love3Dmilano/" target="_blank">I love 3D - Milano</a></td>
+                      <td></td>
+                      <td>Italy</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Virtual-Reality-Milano-Meetup/" target="_blank">Virtual Reality Milano Meetup</a></td>
+                      <td></td>
+                      <td>Italy</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Trieste-Game-Developers/" target="_blank">Trieste Game Developers</a></td>
+                      <td></td>
+                      <td>Italy</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Milano-Augmented-Reality-Meetup/" target="_blank">Milano Augmented Reality Meetup</a></td>
+                      <td></td>
+                      <td>Italy</td>
+                    </tr>
+
+
+
+
+                    <!--  AUSTRIA  -->
+
+
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Vienna-Computer-Vision-Meetup/" target="_blank">Vienna Computer Vision Meetup</a></td>
+                      <td></td>
+                      <td>Austria</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/VRVienna/" target="_blank">Virtual Reality Vienna</a></td>
+                      <td></td>
+                      <td>Austria</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Visionhacker/" target="_blank">Visionhacker</a>  (Vienna)</td>
+                      <td></td>
+                      <td>Austria</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Virtual-Reality-Graz/" target="_blank">Virtual Reality Graz</a>  (Graz)</td>
+                      <td></td>
+                      <td>Austria</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Unity-Meetup-Vienna/" target="_blank">Unity Meetup Vienna</a>  (Vienna)</td>
+                      <td></td>
+                      <td>Austria</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/meetup-group-nKGiKwRT/" target="_blank">VRAustria</a>  (Vienna)</td>
+                      <td></td>
+                      <td>Austria</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/vr-meetup-tirol/" target="_blank">VR m</a> (Wattens)</td>
+                      <td></td>
+                      <td>Austria</td>
+                    </tr>
+
+
+
+
+
+
+                    <!--  HUNGRAY  -->
+
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/VR-AR-meetup-Hungary/" target="_blank">VR/AR Meetup Hungary</a> (Budapest)</td>
+                      <td></td>
+                      <td>Hungary</td>
+                    </tr>
+
+
+
+
+
+                    <!--    -->
+
+
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+
+
+
+
+
+
+                    <!--  Asia, Pacific Region  -->
+
+
+
+
+
+
+                    <!--  CHINA  -->
+
+
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/shanghaivr/" target="_blank">Shanghai Virtual Reality - SHVR</a> (Shanghai)</td>
+                      <td></td>
+                      <td>China</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Coderbunker/" target="_blank">CoderBunker</a> (Shanghai)</td>
+                      <td></td>
+                      <td>China</td>
+                    </tr>
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/reality-hangzhou/" target="_blank">Reality Hangzhou(啥现实?来玩转“现实”)</a> (Hangzhou)</td>
+                      <td></td>
+                      <td>China</td>
+                    </tr>
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/HoloLensChina/" target="_blank">HoloLens User Group China</a> (Beijing)</td>
+                      <td></td>
+                      <td>China</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Beijing-Virtual-Reality-Meetup/" target="_blank">Beijing Virtual Reality Meetup</a> (Beijing)</td>
+                      <td></td>
+                      <td>China</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/VR-Game-Startup-Chendgdu/" target="_blank">VR Game Startup -Chendgdu</a> (Chengdu)</td>
+                      <td></td>
+                      <td>China</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Shanghai-Game-Developers/" target="_blank">Shanghai Game Developers</a> (Shanghai)</td>
+                      <td></td>
+                      <td>China</td>
+                    </tr>
+
+
+
+
+                    <!--  JAPAN  -->
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Experience-coming-technology-Will-it-make-us-happy/" target="_blank">次世代テクノロジーを体感！Experience Coming Techs ……　未来は幸せ？Make us HAPPY?</a> (Tokyo)</td>
+                      <td></td>
+                      <td>Japan</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Kaleido-TOKYO/" target="_blank">Kaleidoscope 東京 // Virtual Reality Film, Art & Experiences</a> (Tokyo)</td>
+                      <td></td>
+                      <td>Japan</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/VR-Playgrounds-Tokyo/" target="_blank">VR Playgrounds Tokyo</a> (Tokyo)</td>
+                      <td></td>
+                      <td>Japan</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Collaboration-between-Tech-Entrepreneur-and-Angel-Investor/" target="_blank">Collaboration between Tech Entrepreneur and Angel Investor</a> (Kyoto)</td>
+                      <td></td>
+                      <td>Japan</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/VRHackathon/" target="_blank">Japan VR Hackathon</a> (Tokyo)</td>
+                      <td></td>
+                      <td>Japan</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Tokyo-VMR-Meetup-Virtual-and-Mixed-Reality/" target="_blank">Tokyo VMR Meetup (Virtual and Mixed Reality)</a> (Tokyo)</td>
+                      <td></td>
+                      <td>Japan</td>
+                    </tr>
+
+
+
+                    <!--  South Korea  -->
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/VRKR-VRKorea/" target="_blank">VRKR - VR Korea</a> (Seoul)</td>
+                      <td></td>
+                      <td>South Korea</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/seoulmeta/" target="_blank">Seoul VR•AR Meetup ☻ 서울 가상현실•증강현실 모임</a> (Seoul)</td>
+                      <td></td>
+                      <td>South Korea</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Seoul-VR-Meetup/" target="_blank">Seoul VR interactive and story-telling Meetup</a> (Seoul)</td>
+                      <td></td>
+                      <td>South Korea</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Kaleido-SEOUL/" target="_blank">Kaleidoscope 서울 // Virtual Reality Film, Art, & Experiences</a> (Seoul)</td>
+                      <td></td>
+                      <td>South Korea</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Midnight-Movietalk/" target="_blank">Midnight Movietalk</a> (Seoul)</td>
+                      <td></td>
+                      <td>South Korea</td>
+                    </tr>
+
+
+
+                    <!--  Mongolia  -->
+
+
+
+
+                    <!--  Australia  -->
+
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/ar_syd/" target="_blank">Augmented Reality (AR) + Virtual Reality (VR) Sydney</a> (Sydney)</td>
+                      <td></td>
+                      <td>Australia</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/AR-VR-MR-Association/" target="_blank">The AR VR MR Association</a> (Sydney)</td>
+                      <td></td>
+                      <td>Australia</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Melbourne-Virtual-Reality/" target="_blank">Melbourne Virtual Reality</a> (Melbourne)</td>
+                      <td></td>
+                      <td>Australia</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Melbourne-VR/" target="_blank">Melbourne VR Community</a> (Melbourne)</td>
+                      <td></td>
+                      <td>Australia</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/BuzzConf/" target="_blank">BuzzConf</a> (Melbourne)</td>
+                      <td></td>
+                      <td>Australia</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Sydney-Virtual-Reality/" target="_blank">Sydney Virtual Reality</a> (Sydney)</td>
+                      <td></td>
+                      <td>Australia</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Virtual-Augmented-Reality-Sydney/" target="_blank">Virtual & Augmented Reality Sydney</a> (Sydney)</td>
+                      <td></td>
+                      <td>Australia</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Melbourne-VR-Virtual-Reality-Meetup/" target="_blank">Real World VR - VR Virtual Reality Forum, Q&A, Demos, Meetup</a> (Melbourne)</td>
+                      <td></td>
+                      <td>Australia</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/ARVRSYD/" target="_blank">VARCCS - Virtual & Augmented Reality Collaborative Sydney</a> (Sydney)</td>
+                      <td></td>
+                      <td>Australia</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/360-Video-VR-AR-Marketing-Sydney/" target="_blank">360 Video / VR / AR Marketing Sydney</a> (Sydney)</td>
+                      <td></td>
+                      <td>Australia</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Western-Australian-Virtual-Reality/" target="_blank">Western Australian Virtual Reality</a> (Perth)</td>
+                      <td></td>
+                      <td>Australia</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Virtual-Augmented-Reality-Melbourne/" target="_blank">Virtual & Augmented Design Melbourne</a> (Melbourne)</td>
+                      <td></td>
+                      <td>Australia</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Matrix-VR/" target="_blank">Matrix VR</a> (Melbourne)</td>
+                      <td></td>
+                      <td>Australia</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Melbourne-VR-Inspiration-Group/" target="_blank">Melbourne VR Inspiration Group</a> (Melbourne)</td>
+                      <td></td>
+                      <td>Australia</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Wollongong-Game-Development-Meetup/" target="_blank">Game Dev, Virtual, Augmented, Mixed Reality Meetup W-Gong</a> (Wollongong)</td>
+                      <td></td>
+                      <td>Australia</td>
+                    </tr>
+
+
+
+
+                    <!--  New Zealand  -->
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Wellington-VR-Oculus-Rift-Meetup/" target="_blank">Wellington Virtual Reality Meetup</a> (Wellington</td>
+                      <td></td>
+                      <td>New Zealand</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/New-Zealand-Virtual-Reality-developers-enthusiasts/" target="_blank">New Zealand Virtual Reality - developers & enthusiasts</a> (Auckland)</td>
+                      <td></td>
+                      <td>New Zealand</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Augmented-Reality-Wellington/" target="_blank">Augmented Reality Wellington</a> (Wellington)</td>
+                      <td></td>
+                      <td>New Zealand</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/NZVRARA_Wellington/" target="_blank">New Zealand VR/AR Association Chats & Meetup's - Wellington</a> (Wellington)</td>
+                      <td></td>
+                      <td>New Zealand</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/NZVRARA_Wellington/" target="_blank">New Zealand VR/AR Association Chats & Meetup's - Auckland</a> (Auckland)</td>
+                      <td></td>
+                      <td>New Zealand</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/NZVRARA_Auckland/" target="_blank">Virtual and Augmented Reality Group</a> (Christchurch)</td>
+                      <td></td>
+                      <td>New Zealand</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Hamilton-Digital-Realities-Meetup/" target="_blank">Hamilton Digital Realities Meetup</a> (Hamilton)</td>
+                      <td></td>
+                      <td>New Zealand</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Tauranga-Digital-Creatives/" target="_blank">Tauranga Digital Creatives</a>  (Tauranga)</td>
+                      <td></td>
+                      <td>New Zealand</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/NZVRARA_Christchurch/" target="_blank">New Zealand VR/AR Association Chats & Meetup's -Christchurch</a> (Christchurch)</td>
+                      <td></td>
+                      <td>New Zealand</td>
+                    </tr>
+
+
+
+
+                    <!--  Philippines  -->
+
+
+
+                    <!--  Indonesia  -->
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Jakarta-Virtual-Reality-Enthusiast/" target="_blank">Jakarta Virtual Reality Enthusiast</a>  (Jakarta)</td>
+                      <td></td>
+                      <td>Indonesia</td>
+                    </tr>
+
+
+
+                    <!--  Malaysia  -->
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Kuala-Lumpur-VR-Virtual-Reality-Meetup/" target="_blank">Kuala Lumpur VR (Virtual Reality) Meetup</a> (Kuala Lumpur)</td>
+                      <td></td>
+                      <td>Malaysia</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Malaysia-Startup-Idea-to-IPO/" target="_blank">Kuala Lumpur Startup: Idea to IPO</a> (Kuala Lumpur)</td>
+                      <td></td>
+                      <td>Malaysia</td>
+                    </tr>
+
+
+
+                    <!--  Singapore  -->
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/asiavrsg/" target="_blank">AsiaVR Association - Singapore Virtual Reality Meetup Group</a></td>
+                      <td></td>
+                      <td>Singapore</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Singapore-Virtual-Reality-Meetup/" target="_blank">Singapore Virtual Reality (SGVR) Meetup</a></td>
+                      <td></td>
+                      <td>Singapore</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/VR-Filmmaking-CoLab/" target="_blank">VR Filmmaking CoLab</a></td>
+                      <td></td>
+                      <td>Singapore</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Singapore-BIM-Meetup-for-Smart-Nation/" target="_blank">Singapore BIM Meetup for Smart Nation</a></td>
+                      <td></td>
+                      <td>Singapore</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/ARSING/" target="_blank">ARSIN - Augmented Reality Singapore</a></td>
+                      <td></td>
+                      <td>Singapore</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/topics/virtual-reality/sg/" target="_blank">Singapore Unreal Engine Developers</a></td>
+                      <td></td>
+                      <td>Singapore</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/VR-AR-Women-Asia/" target="_blank">VR/AR Women Asia</a> (Singapore)</td>
+                      <td></td>
+                      <td>Singapore</td>
+                    </tr>
+
+
+
+
+                    <!--  Vietnam  -->
+
+                    <!--  Laos  -->
+
+
+
+                    <!--  Cambodia  -->
+
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Phnom-Penh-Virtual-Reality-Meetup/" target="_blank">Phnom Penh Virtual Reality Meetup</a> (Phnom Penh)</td>
+                      <td></td>
+                      <td>Cambodia</td>
+                    </tr>
+
+
+
+                    <!--  Thailand  -->
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Bangkok-Videogame-Augmented-Reality-Development-Meetup/" target="_blank">Bangkok Videogame & Augmented Reality Development Meetup</a>  (Bangkok)</td>
+                      <td></td>
+                      <td>Thailand</td>
+                    </tr>
+
+
+
+                    <!--  Myanmar (Burma)  -->
+
+                    <!--  Bhutan  -->
+
+                    <!--  Bangladesh  -->
+
+                    <!--  Nepal  -->
+
+
+
+                    <!--  India  -->
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/mozillaindore/" target="_blank">Mozilla Community Indore</a> (Indore)</td>
+                      <td></td>
+                      <td>India</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Bangalore-Virtual-Reality/" target="_blank">Bangalore Virtual Reality</a> (Bangalore)</td>
+                      <td></td>
+                      <td>India</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Hyderabad-Virtual-Reality-Meetup/" target="_blank">Hyderabad Virtual Reality Meetup</a> (Hyderabad)</td>
+                      <td></td>
+                      <td>India</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Bangalore-Oculus-Rift-Meetup/" target="_blank">Bangalore Oculus Rift Meetup</a> (Bangalore)</td>
+                      <td></td>
+                      <td>India</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Bangalore-VMware-and-Virtualization-Enthusiats-Meetup/" target="_blank">Bangalore VMware and Virtualization Enthusiats Meetup</a> (Bangalore)</td>
+                      <td></td>
+                      <td>India</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Bangalore-Augmented-Reality-Meetup/" target="_blank">Bangalore Augmented Reality Meetup</a> (Bangalore)</td>
+                      <td></td>
+                      <td>India</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Unreal-Engine-Developers-Mumbai/" target="_blank">Unreal Engine Meetup -Mumbai</a> (Mumbai)</td>
+                      <td></td>
+                      <td>India</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Pune-Augmented-Reality-Meetup/" target="_blank">Pune Augmented Reality Meetup</a> (Pune)</td>
+                      <td></td>
+                      <td>India</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Unreal-Engine-Game-Developers-Mumbai/" target="_blank">Unreal Engine Game Developers Mumbai</a> (Mumbai)</td>
+                      <td></td>
+                      <td>India</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Hyderabad-VR-Meetup/" target="_blank">Hyderabad Immersive Tech and Virtual Reality Meetup</a> (Hyderabad)</td>
+                      <td></td>
+                      <td>India</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Delhi-Virtual-Reality-VR-Meetup/" target="_blank">Delhi Virtual Reality (VR) Meetup</a> (Delhi)</td>
+                      <td></td>
+                      <td>India</td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="https://www.meetup.com/Virtual-Reality-and-Augmented-Reality-Chennai-Wing/" target="_blank">Virtual Reality & Augmented Reality - Each One Teach One</a> (Chennai)</td>
+                      <td></td>
+                      <td>India</td>
+                    </tr>
+
+
+
+
+
+                    <!-- Work in progress -->
+
+                    <!--
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="" target="_blank"></a></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </table>
+                  </div>
+
+
+
+                  <!-- END OF "COMMUNITIES CONTENT LINKS" -->
+
+
+
+
+
+
+
+
+
+
+
+                  <center>
+                  <div class="text-body text-left">
+
+                  </div>
+                  </center>
+                </div>
+
+
+
+
+
+
+
+                <br>
+                <br>
+                <br>
+
+
+                <!-- Beginning of  Code -->
+
+
+
+
+
+
+
+                <!-- End of  Code -->
+
+
+
+
+
+                <br>
+                <br>
+                <br>
+
+
+
+                    <br><br>
+
+
+
+            </div>
+
+
+
+
+          <br>
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+
+
+
+
+	<footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge" ><center>
+      <a href="#"><i class="fa fa-facebook-official" style="font-size:24px"></i></a>
+      <a href="https://twitter.com/J_AlbertSanchez"><i class="fa fa-twitter" style="font-size:24px"></i></a>
+      <a href="#"><i class="fa fa-linkedin" style="font-size:24px"></i></a>
+      <a href=""><a data-flip-widget="ico" href="https://flipboard.com/@Albert_Sanchez_"><img src="http://cdn.flipboard.com/badges/flipboard_swsw.png" alt="Flipboard" style="height:24px" /></a><script src="https://cdn.flipboard.com/web/buttons/js/flbuttons.min.js" type="text/javascript"></script></a>
+      <p class="w3-medium">
+      Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+      </p>
+      <p class="w3-medium">© Copyright 2018 , All Rights Reserved.</p>
+
+      </center>
+    
+  </footer>
+
+
+
+
+    </body>
+</html>
